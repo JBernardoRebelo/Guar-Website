@@ -1,15 +1,24 @@
+/* eslint-disable react/jsx-pascal-case */
 import React from "react";
 
-function Story(){
+import { _InfoSection } from "../Style";
+import { _TextBox } from "../Style";
+
+import img_pumpking from '../Images/pumpkin.png';
+import img_forest from '../Images/forest.png';
+
+export default function Story(){
     return(
-        <div>
+        <_InfoSection>
             <h2>Story</h2>
-            <p></p>
-            <img src="pumpkin.png" className="story--img1" alt="pumpkinimg"/>
-            <p></p>
-            <img src="forest.png" className="story--img2" alt="forestimg"/>
-        </div>
+            <_TextBox>
+                <p className="Info">blah blah</p>
+                <img src={img_pumpking} className="image" height={200} alt="pumpkinimg"/>
+            </_TextBox>
+            <_TextBox>
+                <img src={img_forest} className="image" height={200} alt="forestimg"/>
+                <p className="Info">blah blah</p>
+            </_TextBox>
+        </_InfoSection>
     )
 }
-
-export default Story();

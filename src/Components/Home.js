@@ -9,7 +9,7 @@ export default function Home() {
     <div>
       <Navbar/>
       <Intro/>
-      {/* <Story/>
+      <Story/>
       {/* <Gameplay/>
       <Contacts/> */}
     </div>

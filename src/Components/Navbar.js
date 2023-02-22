@@ -7,13 +7,13 @@ function Navbar()
 {
     return(
         <_NavBar>
-            <img src={guar_logo} className="navbar--logo" alt="guarlogo"/>
-            <h1 className="navbar--title">Guar</h1>
-            <div className="navbar--links"> 
-                <p>Intro</p>
-                <p>Story</p>
-                <p>Gameplay</p>
-                <p>Contacts</p>
+            <img src={guar_logo} className="navbarLogo" width={100} alt="guarlogo"/>
+            <h1 className="navbarTitle">Guar</h1>
+            <div className="navbarElements">
+                <h4 className="navBarElement">Intro</h4>
+                <h4 className="navBarElement">Story</h4>
+                <h4 className="navBarElement">Gameplay</h4>
+                <h4 className="navBarElement">Contacts</h4>
             </div>
         </_NavBar>
     )

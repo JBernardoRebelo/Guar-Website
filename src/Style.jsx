@@ -4,52 +4,68 @@ export const _App = styled.section`
 
     background-color: #FCBB6D;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    .image{
+        border-radius: 10px;
+    }
 `
 
 export const _NavBar = styled.section`
 
     background-color: #D8737F;
     display: flex;
-    padding: 20px 36px;
+    align-content: center;
+    justify-content: space-evenly;
     box-shadow: 0px 3px 7.5px rgba(0, 0, 0, 0.1);
 
-    .navbar--logo{
-        position: fixed;
-        height: 10%;
+    .navbarLogo{
+        
     }
 
-    .navbar--title{
+    .navbarTitle{
         color: #685D79;
-        position: relative;
-        top: 50%;
-        left: 50%;
+        font-size: x-large;
+        font-weight: bolder;
+        text-shadow: 1px 1px #1117;
     }
 
-    .navbar--links{
+    .navbarElements{
         color: #685D79;
         display: flex;
-        position: relative;
-        flex-direction: column;
-        left: 70%;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .navBarElement{
+        margin: 5%;
     }
 
 `
 
-export const _Intro = styled.section`
+export const _InfoSection = styled.section`
 
-    display: block;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    color: #685D79;
 
-
-    .intro--title{
+    .Title{
         color:#685D79;
     }
 
-    .intro--txt{
-        color: #685D79;
+    .Info{
+        margin: 5%;
     }
 
-    .intro--img{
-        height: 200px;
-    }
+`
+
+export const _TextBox = styled.section`
+
+    display: flex;
+    margin: 5%;
 
 `
