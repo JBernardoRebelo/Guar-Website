@@ -12,14 +12,15 @@ export const _App = styled.section`
 
 export const _NavBar = styled.section`
 
-    background-color: #D8737F;
+    box-shadow: 0px 3px 7.5px rgba(0, 0, 0, 0.1);
+    background-image: '../Images/pumpkinbanner.png';
     display: flex;
     align-content: center;
     justify-content: space-evenly;
-    box-shadow: 0px 3px 7.5px rgba(0, 0, 0, 0.1);
+    
 
-    .navbarLogo{
-        
+    .banner{
+        display: contents;
     }
 
     .navbarTitle{

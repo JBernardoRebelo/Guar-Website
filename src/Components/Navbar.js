@@ -1,6 +1,8 @@
 /* eslint-disable react/jsx-pascal-case */
 import React from "react";
+
 import { _NavBar } from "../Style";
+
 import guar_logo from '../Images/guaricon.png'
 
 function Navbar()
