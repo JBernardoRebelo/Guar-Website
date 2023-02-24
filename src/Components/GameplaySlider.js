@@ -25,7 +25,7 @@ export default function GameplaySlider({slides}){
         position: 'absolute',
         top: '50%',
         transform: 'translate(0, -50%)',
-        left: '32px',
+        left: '-50px',
         fontSize: '45px',
         color: '#fff',
         zIndex: '1',
@@ -37,7 +37,7 @@ export default function GameplaySlider({slides}){
         position: 'absolute',
         top: '50%',
         transform: 'translate(0, -50%)',
-        right: '32px',
+        right: '-50px',
         fontSize: '45px',
         color: '#fff',
         zIndex: '1',
@@ -78,10 +78,14 @@ export default function GameplaySlider({slides}){
 
     return(
         <div style={sliderStyles}>
+
             <h1>pila</h1>
+
             <div style={leftArrowStyles} onClick={goToPrevious}>◀</div>
             <div style={rightArrowStyles} onClick={goToNext}>▶</div>
+
             <div style={slideStyles}></div>
+
             <div style={dotsContainerStyles}>
                 {slides.map((slide, slideIndex) => (
                     <div 

@@ -23,9 +23,13 @@ export default function Gameplay(){
     ];
 
     const containerStyles = {
-        width: '500px',
-        height: '500px',
+        width: '400px',
+        height: '400px',
         margin: '0 auto'
+    }
+
+    const marginTop = {
+        marginTop: '100px'
     }
 
     return(
@@ -69,7 +73,7 @@ export default function Gameplay(){
                         Repeat: The gameplay cycle repeats as the player progresses through the game, completing quests, leveling up, exploring new areas, and facing increasingly difficult challenges.
                         </li>
                     </ul> */}
-                    <h4>
+                    <h4 style={marginTop}>
                     Overall, Guar offers a rich and immersive RPG experience, with deep gameplay mechanics and an engaging storyline that will keep players hooked for hours on end.
                     </h4>
                 </p>

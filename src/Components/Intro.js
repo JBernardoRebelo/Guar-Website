@@ -9,10 +9,11 @@ import img_dwarf from '../Images/dwarf.png';
 function Intro(){
     return(
         <_InfoSection>
-            <h2 className="Title">Intro</h2>
             <_TextBox>
-                <img src={img_dwarf} className="image" height={200} alt="introimg"/>
-                <p className="Info">
+                <img src={img_dwarf} className="imageGlue" height={450} alt="introimg"/>
+                <div classname="flexBoxTitle">
+                    <h2 className="Title">Intro</h2>
+                    <p className="Info">
                     <p>Welcome to the fantastical world of Guar, a realm filled with magic, mythical creatures, and perilous adventures.
                     Guar is a land that has been plagued by darkness and evil forces for centuries.
                     The only hope for the land is a group of brave heroes who are willing to embark on a journey to restore the balance between good and evil.
@@ -30,6 +31,7 @@ function Intro(){
                     The fate of the world is in your hands.
                     </p>
                 </p>
+                </div>
             </_TextBox>
         </_InfoSection>
     )

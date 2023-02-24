@@ -69,60 +69,6 @@ export const _NavBar = styled.section`
     .navBarElement:hover{
         color: var(--secondaryColor);
     }
-
-    /* .navButton{
-        padding: 2%;
-        cursor: pointer;
-        background: transparent;
-        border: none;
-        outline: none;
-        color: var(--textColor);
-        visibility: hidden;
-        opacity: 0;
-    }
-
-    .navButtonOff{
-
-
-    } */
-
-    /* @media only screen and (max-width: 1024px) {
-	header .nav-btn {
-		visibility: visible;
-		opacity: 1;
-	}
-
-	header nav {
-		position: fixed;
-		top: 0;
-		left: 0;
-		height: 100%;
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		gap: 1.5rem;
-		background-color: var(--mainColor);
-		transition: 1s;
-		transform: translateY(-100vh);
-	}
-
-	header .responsive_nav {
-		transform: none;
-	}
-
-	nav .nav-close-btn {
-		position: absolute;
-		top: 2rem;
-		right: 2rem;
-	}
-
-	nav a {
-		font-size: 1.5rem;
-	}
-} */
-
 `
 
 export const _InfoSection = styled.section`
@@ -131,7 +77,7 @@ export const _InfoSection = styled.section`
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    margin: 5%;
+    margin: 10%;
     background-color: rgb(216, 115, 127, 0.5);
     box-shadow: 0px 3px 7.5px rgba(0, 0, 0, 0.5);
 
@@ -140,9 +86,9 @@ export const _InfoSection = styled.section`
     --textColor: #FCBB6D;
     --shadowColorDark: #40394a;
 
-
-    .bgImage{
-        filter: blur(10px);
+    .imageGlue{
+        margin: -1.6%;
+        position: static ;
     }
 
     .Title{
@@ -152,7 +98,15 @@ export const _InfoSection = styled.section`
 
     .Info{
         color: black;
-        margin: 3%;
+        margin-top: 0%;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+
+    .flexBoxTitle{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
     }
 
 `
