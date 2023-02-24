@@ -1,7 +1,8 @@
 /* eslint-disable react/jsx-pascal-case */
 import React from 'react';
-import { _App } from './Style';
 import Home from './Components/Home';
+
+import { _App } from './Style';
 
 function App() {
   return (
