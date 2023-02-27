@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 import banner from './Images/pumpkinbanner_update.png'
-import banner2 from './Images/pumpkin.png'
 import background_img from './Images/fire_forest_update.png'
 
 export const _App = styled.section`
@@ -18,13 +17,13 @@ export const _App = styled.section`
 
 export const _NavBar = styled.section`
 
-    background-image: url(${banner});
-    background-size: cover;
     box-shadow: 0px 3px 7.5px rgba(0, 0, 0, 0.5);
     display: flex;
     align-content: center;
     align-items: center;
     justify-content: space-around;
+    background-size: cover;
+    background-image: url(${banner});
     
     --mainColor: #D8737F;
     --mainColorLight: #f18c8e;
@@ -64,10 +63,9 @@ export const _NavBar = styled.section`
         color: var(--mainColor);
         text-decoration: none;
         font-weight: bold;
-    }
-
-    .navBarElement:hover{
-        color: var(--secondaryColor);
+        :hover{
+            color: var(--secondaryColor);
+        }
     }
 `
 
@@ -77,7 +75,7 @@ export const _InfoSection = styled.section`
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    margin: 10%;
+    margin: 5%;
     background-color: rgb(216, 115, 127, 0.5);
     box-shadow: 0px 3px 7.5px rgba(0, 0, 0, 0.5);
 
@@ -86,19 +84,14 @@ export const _InfoSection = styled.section`
     --textColor: #FCBB6D;
     --shadowColorDark: #40394a;
 
-    .imageGlue{
-        margin: -1.6%;
-        position: static ;
-    }
-
     .Title{
+        margin-bottom: -2%;
         color: var(--mainColorLight);
         text-shadow: 2px 1px var(--shadowColorDark);
     }
 
     .Info{
         color: black;
-        margin-top: 0%;
         margin-left: 3%;
         margin-right: 3%;
     }
@@ -115,65 +108,96 @@ export const _Contacts = styled.section`
 
     --mainColor: #D8737F;
     --mainColorLight: #f18c8e;
-    --textColor: #FCBB6D;
+    --highlight: #FCBB6D;
     --shadowColor: #685D79;
     --shadowColorDark: #40394a;
 
+    margin-top: auto;
     display: flex;
+    align-content: center;
     align-items: center;
-    text-align: center;
-    justify-content: center;
+    justify-content: space-around;
 
-    background-image: url(${banner2});
     background-size: cover;
     background-position: 1%;
+    background-image: url(${banner});
 
-    .list{
-
+    .contactElement{
+        margin: 2%;
+        color: var(--mainColor);
+        text-decoration: none;
+        font-weight: bold;
+        :hover{
+            color: var(--highlight);
+        }
     }
-
 `
 
 export const _SliderStyles = styled.section`
-        height: 100%;
-        width: 100%;
-        position: relative;
-        text-align: center;
-
-        .leftArrowStyles{
-            position: absolute;
-            top: 50%;
-            transform: translate(0, -50%);
-            left: -50px;
-            font-size: 45px;
-            color: #fff;
-            z-Index: 1;
-            cursor: pointer;
-        }
-
-        .rightArrowStyles{
-            position: absolute;
-            top: 50%;
-            transform: translate(0, -50%);
-            right: -50px;
-            font-size: 45px;
-            color: #fff;
-            z-Index: 1;
-            cursor: pointer;
-        }
-
         
-        .dotsContainerStyles{
-            display: flex;
-            justify-content: center;
-        }
+    height: 100%;
+    width: 100%;
+    position: relative;
+    text-align: center;
 
-        .dotStyles{
-            margin: 0 3px;
-            cursor: pointer;
-            font-size: 50px;
-            font-weight: bolder;
+    --mainColor: #D8737F;
+    --mainColorLight: #f18c8e;
+    --highlight: #FCBB6D;
+    --shadowColor: #685D79;
+    --shadowColorDark: #40394a;
+
+    .leftArrowStyles{
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        left: -50px;
+        font-size: 45px;
+        color: var(--mainColorLight);
+        z-Index: 1;
+        cursor: pointer;
+        :hover{
+            color: var(--highlight);
         }
+    }
+
+    .rightArrowStyles{
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        right: -50px;
+        font-size: 45px;
+        color: var(--mainColorLight);
+        z-Index: 1;
+        cursor: pointer;
+        :hover{
+            color: var(--highlight);
+        }
+    }
+        
+    .dotsContainerStyles{
+        display: flex;
+        justify-content: center;
+    }
+
+    .dotStyles{
+        margin: 0 5px;
+        cursor: pointer;
+        font-size: 50px;
+        font-weight: bolder;
+        color: var(--shadowColorDark);
+        :hover{
+            color: var(--highlight);
+        }
+    }
+
+    .dotCurrent{
+        color: var(--highlight);
+    }
+
+    .description{
+        height: 100px;
+        margin-bottom: -30px;
+    }
 
 `
 

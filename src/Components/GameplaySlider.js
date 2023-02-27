@@ -10,7 +10,7 @@ import { _SliderStyles } from "../Style";
 const slidesContainerStyles = {
 	display: "flex",
 	height: "100%",
-	transition: "transform ease-out 0.5s",
+	transition: "transform ease-out 0.7s",
 };
 
 const slidesContainerOverFlowStyles = {
@@ -96,9 +96,10 @@ export default function GameplaySlider({ slides, parentWidth }) {
 			{/* <div style={slideStyles}></div> */}
 
 			{/* Description */}
-			<p>{slides[currentIndex].description}</p>
+			<p className="description">{slides[currentIndex].description}</p>
 
 			{/* Selectors and logic */}
+			{/* Fazer current dot */}
 			<div className="dotsContainerStyles">
 				{slides.map((slide, slideIndex) => (
 					<div

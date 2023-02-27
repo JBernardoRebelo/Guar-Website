@@ -13,6 +13,16 @@ import img_character from "../Images/character.jpg";
 import img_dwarf from "../Images/dwarf.png";
 import img_banner from "../Images/pumpkinbanner.png";
 
+const containerStyles = {
+	width: "1200px",
+	height: "400px",
+	margin: "0 auto",
+};
+
+const marginTop = {
+	marginTop: "200px",
+};
+
 export default function Gameplay() {
 	const slides = [
 		{
@@ -59,35 +69,24 @@ export default function Gameplay() {
 		},
 	];
 
-	const containerStyles = {
-		width: "400px",
-		height: "400px",
-		margin: "0 auto",
-	};
-
-	const marginTop = {
-		marginTop: "230px",
-	};
-
 	return (
 		<_InfoSection>
 			<h2 className="Title">Gameplay</h2>
 			<_TextBox>
 				<p className="Info">
-					<h4>
-						{" "}
+					<p>
 						The game is played from a third-person perspective, and players must
 						navigate through a variety of environments, including forests,
 						dungeons, and cities, to complete their quest.
-					</h4>
+					</p>
 					<div style={containerStyles}>
 						<GameplaySlider slides={slides} parentWidth={400} />
 					</div>
-					<h4 style={marginTop}>
+					<p style={marginTop}>
 						Overall, Guar offers a rich and immersive RPG experience, with deep
 						gameplay mechanics and an engaging storyline that will keep players
 						hooked for hours on end.
-					</h4>
+					</p>
 				</p>
 			</_TextBox>
 		</_InfoSection>
