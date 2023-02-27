@@ -32,8 +32,6 @@ export default function GameplaySlider({ slides, parentWidth }) {
 		width: `${parentWidth}px`,
 	});
 
-	const titleStyling = (slideIndex) => <p>{slides[slideIndex].Title}</p>;
-
 	const getSlidesContainerStylesWithWidth = () => ({
 		...slidesContainerStyles,
 		width: parentWidth * slides.length,
@@ -99,8 +97,7 @@ export default function GameplaySlider({ slides, parentWidth }) {
 			{/* Description */}
 			<p className="description">{slides[currentIndex + 1].description}</p>
 
-			{/* Selectors and logic */}
-			{/* Fazer current dot */}
+			{/* Selectors logic */}
 			<div className="dotsContainerStyles">
 				{slides.map((slide, slideIndex) => (
 					<div

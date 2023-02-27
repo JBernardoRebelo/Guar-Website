@@ -10,6 +10,10 @@ export const _App = styled.section`
     background-size: cover;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
+    html{   
+        scroll-behavior: smooth;
+    }
+
     .image{
         border-radius: 4%;
     }

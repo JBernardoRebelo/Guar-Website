@@ -75,25 +75,27 @@ export default function Gameplay() {
 	];
 
 	return (
-		<_InfoSection>
-			<h2 className="Title">Gameplay</h2>
-			<_TextBox>
-				<p className="Info">
-					<p>
-						The game is played from a third-person perspective, and players must
-						navigate through a variety of environments, including forests,
-						dungeons, and cities, to complete their quest.
+		<div id="Gameplay">
+			<_InfoSection>
+				<h2 className="Title">Gameplay</h2>
+				<_TextBox>
+					<p className="Info">
+						<p>
+							The game is played from a third-person perspective, and players
+							must navigate through a variety of environments, including
+							forests, dungeons, and cities, to complete their quest.
+						</p>
+						<div style={containerStyles}>
+							<GameplaySlider slides={slides} parentWidth={400} />
+						</div>
+						<p style={marginTop}>
+							Overall, Guar offers a rich and immersive RPG experience, with
+							deep gameplay mechanics and an engaging storyline that will keep
+							players hooked for hours on end.
+						</p>
 					</p>
-					<div style={containerStyles}>
-						<GameplaySlider slides={slides} parentWidth={400} />
-					</div>
-					<p style={marginTop}>
-						Overall, Guar offers a rich and immersive RPG experience, with deep
-						gameplay mechanics and an engaging storyline that will keep players
-						hooked for hours on end.
-					</p>
-				</p>
-			</_TextBox>
-		</_InfoSection>
+				</_TextBox>
+			</_InfoSection>
+		</div>
 	);
 }
