@@ -138,6 +138,7 @@ export const _SliderStyles = styled.section`
         height: 100%;
         width: 100%;
         position: relative;
+        text-align: center;
 
         .leftArrowStyles{
             position: absolute;
@@ -170,7 +171,7 @@ export const _SliderStyles = styled.section`
         .dotStyles{
             margin: 0 3px;
             cursor: pointer;
-            font-size: 20px;
+            font-size: 50px;
             font-weight: bolder;
         }
 
