@@ -188,6 +188,10 @@ export const _SliderStyles = styled.section`
         :hover{
             color: var(--highlight);
         }
+        
+        &.selected{
+            color: var(--mainColor);
+        }
     }
 
     .dotCurrent{

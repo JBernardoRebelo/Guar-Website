@@ -32,6 +32,8 @@ export default function GameplaySlider({ slides, parentWidth }) {
 		width: `${parentWidth}px`,
 	});
 
+	const titleStyling = (slideIndex) => <p>{slides[slideIndex].Title}</p>;
+
 	const getSlidesContainerStylesWithWidth = () => ({
 		...slidesContainerStyles,
 		width: parentWidth * slides.length,
@@ -41,13 +43,13 @@ export default function GameplaySlider({ slides, parentWidth }) {
 	// Logic
 	const goToPrevious = () => {
 		const isFirstSlide = currentIndex === 0;
-		const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
+		const newIndex = isFirstSlide ? slides.length - 2 : currentIndex - 1;
 
 		setCurrentIndex(newIndex);
 	};
 
 	const goToNext = useCallback(() => {
-		const isLastSlide = currentIndex === slides.length - 1;
+		const isLastSlide = currentIndex === slides.length - 2;
 		const newIndex = isLastSlide ? 0 : currentIndex + 1;
 
 		setCurrentIndex(newIndex);
@@ -80,7 +82,7 @@ export default function GameplaySlider({ slides, parentWidth }) {
 			</div>
 
 			{/* Title */}
-			<h3>{slides[currentIndex].title}</h3>
+			<h3>{slides[currentIndex + 1].title}</h3>
 
 			{/* Images */}
 			<div style={slidesContainerOverFlowStyles}>
@@ -93,17 +95,18 @@ export default function GameplaySlider({ slides, parentWidth }) {
 					))}
 				</div>
 			</div>
-			{/* <div style={slideStyles}></div> */}
 
 			{/* Description */}
-			<p className="description">{slides[currentIndex].description}</p>
+			<p className="description">{slides[currentIndex + 1].description}</p>
 
 			{/* Selectors and logic */}
 			{/* Fazer current dot */}
 			<div className="dotsContainerStyles">
 				{slides.map((slide, slideIndex) => (
 					<div
-						className="dotStyles"
+						className={
+							"dotStyles " + (slideIndex === currentIndex ? "selected" : "")
+						}
 						key={slideIndex}
 						onClick={() => goToSlide(slideIndex)}
 					>

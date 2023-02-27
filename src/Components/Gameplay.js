@@ -26,6 +26,11 @@ const marginTop = {
 export default function Gameplay() {
 	const slides = [
 		{
+			image: null,
+			title: "",
+			description: "",
+		},
+		{
 			image: img_swamp,
 			title: "Quests and Objectives",
 			description:
