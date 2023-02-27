@@ -29,7 +29,7 @@ export default function Gameplay(){
     }
 
     const marginTop = {
-        marginTop: '100px'
+        marginTop: '230px'
     }
 
     return(
@@ -42,42 +42,10 @@ export default function Gameplay(){
                     <div style={containerStyles}>
                         <GameplaySlider slides={slides}/>
                     </div>
-                    {/* <ul>
-                        <li>
-                        Quests and Objectives: The game starts with the player receiving a quest or objective from a non-playable character (NPC). 
-                        The player must then explore the game world to find the required items, defeat enemies, or accomplish certain tasks to complete the quest.
-                        </li>
-                        <li>
-                        Combat: Combat in Guar is turn-based, and players can choose from a variety of attacks and spells to defeat their enemies. 
-                        Players can also recruit companions to fight alongside them, each with their own unique abilities and attributes.
-                        </li>
-                        <li>
-                        Leveling up: As players progress through the game, they earn experience points (XP) for defeating enemies and completing quests. 
-                        XP allows the player to level up, increasing their stats and unlocking new abilities.
-                        </li>
-                        <li>
-                        Exploration: The world of Guar is vast, and players must explore it to find hidden treasures, secret locations, and valuable resources. 
-                        Exploration is also necessary to progress through the main storyline and complete quests.
-                        </li>
-                        <li>
-                        Crafting and Upgrading: The game features a robust crafting system that allows players to create weapons, armor, and other items using resources gathered from the game world. 
-                        Players can also upgrade their existing gear to make it more powerful.
-                        </li>
-                        <li>
-                        Social Interaction: Players can interact with NPCs in the game world, building relationships and earning rewards for completing social objectives.
-                        </li>
-                        <li>
-                        Boss Battles: The game features epic boss battles that require players to use all of their skills and abilities to defeat powerful enemies and progress through the game's story.
-                        </li>
-                        <li>
-                        Repeat: The gameplay cycle repeats as the player progresses through the game, completing quests, leveling up, exploring new areas, and facing increasingly difficult challenges.
-                        </li>
-                    </ul> */}
                     <h4 style={marginTop}>
                     Overall, Guar offers a rich and immersive RPG experience, with deep gameplay mechanics and an engaging storyline that will keep players hooked for hours on end.
                     </h4>
                 </p>
-                {/* <img src={img_pumpking} className="image" height={200} alt="pumpkinimg"/> */}
             </_TextBox>
         </_InfoSection>
     )

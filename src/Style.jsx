@@ -134,6 +134,48 @@ export const _Contacts = styled.section`
 
 `
 
+export const _SliderStyles = styled.section`
+        height: 100%;
+        width: 100%;
+        position: relative;
+
+        .leftArrowStyles{
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            left: -50px;
+            font-size: 45px;
+            color: #fff;
+            z-Index: 1;
+            cursor: pointer;
+        }
+
+        .rightArrowStyles{
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            right: -50px;
+            font-size: 45px;
+            color: #fff;
+            z-Index: 1;
+            cursor: pointer;
+        }
+
+        
+        .dotsContainerStyles{
+            display: flex;
+            justify-content: center;
+        }
+
+        .dotStyles{
+            margin: 0 3px;
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+
+`
+
 export const _TextBox = styled.section`
 
     display: flex;

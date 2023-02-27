@@ -1,17 +1,15 @@
+/* eslint-disable react/jsx-pascal-case */
 import React from "react";
 import { useState } from "react";
+
+import { _SliderStyles } from "../Style";
 
 
 export default function GameplaySlider({slides}){
     
     const[currentIndex, setCurrentIndex] = useState(0);
     
-    const sliderStyles = {
-        height: '100%',
-        width: '100%',
-        position: 'relative'
-    }
-
+    // Inline
     const slideStyles = {
         width: '100%',
         height: '100%',
@@ -20,30 +18,20 @@ export default function GameplaySlider({slides}){
         backgroundSize: 'cover',
         backgroundImage: `url(${slides[currentIndex].image})`
     }
-
-    const leftArrowStyles = {
-        position: 'absolute',
-        top: '50%',
-        transform: 'translate(0, -50%)',
-        left: '-50px',
-        fontSize: '45px',
-        color: '#fff',
-        zIndex: '1',
-        cursor: 'pointer'
-    }
-
     
-    const rightArrowStyles = {
-        position: 'absolute',
-        top: '50%',
-        transform: 'translate(0, -50%)',
-        right: '-50px',
-        fontSize: '45px',
-        color: '#fff',
-        zIndex: '1',
-        cursor: 'pointer'
+    const dotsContainerStyles = {
+        display: 'flex',
+        justifyContent: 'center'
     }
 
+    const dotStyles = {
+        nargin: '0 3px',
+        cursor: 'pointer',
+        fontSize: '20px',
+        fontWeight: 'bolder'
+    }
+
+    // Logic
     const goToPrevious = () => {
 
         const isFirstSlide = currentIndex === 0;
@@ -60,43 +48,37 @@ export default function GameplaySlider({slides}){
         setCurrentIndex(newIndex);
     }
 
-    const dotsContainerStyles = {
-        display: 'flex',
-        justifyContent: 'center'
-    }
-
-    const dotStyles = {
-        nargin: '0 3px',
-        cursor: 'pointer',
-        fontSize: '20px',
-        fontWeight: 'bolder'
-    }
-
     const goToSlide = (slideIndex) => {
         setCurrentIndex(slideIndex);
     } 
 
     return(
-        <div style={sliderStyles}>
+        <_SliderStyles>
+            {/* Arrows */}
+            <div className="leftArrowStyles" onClick={goToPrevious}>◀</div>
+            <div className="rightArrowStyles" onClick={goToNext}>▶</div>
+            
+            {/* Title */}
+            <h3>{slides[currentIndex].title}</h3>
 
-            <h1>pila</h1>
-
-            <div style={leftArrowStyles} onClick={goToPrevious}>◀</div>
-            <div style={rightArrowStyles} onClick={goToNext}>▶</div>
-
+            {/* Images */}
             <div style={slideStyles}></div>
 
-            <div style={dotsContainerStyles}>
+            {/* Description */}
+            <p>{slides[currentIndex].description}</p>
+
+            {/* Selectors and logic */}
+            <div className="dotsContainerStyles">
                 {slides.map((slide, slideIndex) => (
                     <div 
-                        style={dotStyles}
+                        className="dotStyles"
                         key={slideIndex}
                         onClick={() => goToSlide(slideIndex)}>
-                             ◉
+                             . 
                     </div>
                 )
                 )}
             </div>
-        </div>
+        </_SliderStyles>
     )
 }

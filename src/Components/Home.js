@@ -6,7 +6,6 @@ import Gameplay from './Gameplay';
 import Contacts from './Contacts';
 
 export default function Home() {
-  
     return(
     <div>
       <Navbar/>
