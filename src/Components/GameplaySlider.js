@@ -64,7 +64,7 @@ export default function GameplaySlider({ slides, parentWidth }) {
 		}
 		timerRef.current = setTimeout(() => {
 			goToNext();
-		}, 5000);
+		}, 10000);
 
 		return () => clearTimeout(timerRef.current);
 	}, [goToNext]);
@@ -99,7 +99,7 @@ export default function GameplaySlider({ slides, parentWidth }) {
 
 			{/* Selectors logic */}
 			<div className="dotsContainerStyles">
-				{slides.map((slide, slideIndex) => (
+				{slides.slice(0, slides.length - 1).map((slide, slideIndex) => (
 					<div
 						className={
 							"dotStyles " + (slideIndex === currentIndex ? "selected" : "")

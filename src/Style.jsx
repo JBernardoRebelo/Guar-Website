@@ -5,17 +5,16 @@ import background_img from './Images/fire_forest_update.png'
 
 export const _App = styled.section`
 
-    margin: -1.5%;
     background-size: cover;
     background-image: url(${background_img});
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
-    html{   
-        scroll-behavior: smooth;
-    }
-
     .image{
         border-radius: 4%;
+    }
+
+    .marginTop{
+        padding-top: 1px;
     }
 `
 
@@ -26,7 +25,9 @@ export const _NavBar = styled.section`
     height: 6%;
     width: 100%;
     display: flex;
-    /* position: fixed; */
+    z-index: 100;
+    /* position: static; */
+    position: fixed;
     transition: 0.5s;
     align-items: center;
     align-content: center;
@@ -86,6 +87,7 @@ export const _NavBar = styled.section`
 
 export const _InfoSection = styled.section`
 
+    margin-top: 5%;
     margin: 5%;
     display: flex;
     flex-wrap: wrap;
@@ -136,7 +138,6 @@ export const _Contacts = styled.section`
     --shadowColor: #685D79;
     --mainColorLight: #f18c8e;
     --shadowColorDark: #40394a;
-
 
     .contactElement{
         margin: 2%;
@@ -220,7 +221,7 @@ export const _SliderStyles = styled.section`
     }
 
     .description{
-        height: 100px;
+        height: 50px;
         margin-bottom: -30px;
     }
 

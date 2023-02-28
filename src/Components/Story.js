@@ -9,7 +9,7 @@ import img_character from "../Images/character.jpg";
 
 export default function Story() {
 	return (
-		<div id="Story">
+		<div className="marginTop" id="Story">
 			<_InfoSection>
 				<h2 className="Title">Story</h2>
 				<_TextBox>

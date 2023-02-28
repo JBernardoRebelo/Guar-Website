@@ -8,7 +8,7 @@ import img_dwarf from "../Images/dwarf.png";
 
 function Intro() {
 	return (
-		<div id="Intro">
+		<div className="marginTop" id="Intro">
 			<_InfoSection>
 				<h2 className="Title">Intro</h2>
 				<_TextBox>

@@ -75,7 +75,7 @@ export default function Gameplay() {
 	];
 
 	return (
-		<div id="Gameplay">
+		<div className="marginTop" id="Gameplay">
 			<_InfoSection>
 				<h2 className="Title">Gameplay</h2>
 				<_TextBox>
