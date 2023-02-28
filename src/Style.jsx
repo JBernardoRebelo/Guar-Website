@@ -6,8 +6,8 @@ import background_img from './Images/fire_forest_update.png'
 export const _App = styled.section`
 
     margin: -1.5%;
-    background-image: url(${background_img});
     background-size: cover;
+    background-image: url(${background_img});
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
     html{   
@@ -21,52 +21,63 @@ export const _App = styled.section`
 
 export const _NavBar = styled.section`
 
-    box-shadow: 0px 3px 7.5px rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    height: 6%;
+    width: 100%;
     display: flex;
-    align-content: center;
+    /* position: fixed; */
+    transition: 0.5s;
     align-items: center;
-    justify-content: space-around;
+    align-content: center;
     background-size: cover;
+    justify-content: space-around;
     background-image: url(${banner});
-    
+    box-shadow: 0px 3px 7.5px rgba(0, 0, 0, 0.5);
+
     --mainColor: #D8737F;
-    --mainColorLight: #f18c8e;
     --textColor: #FCBB6D;
     --shadowColor: #685D79;
+    --mainColorLight: #f18c8e;
+
+    :hover{
+        height: 10%;
+        transition: 0.5s;
+    }
 
     .banner{
         display: contents;
     }
 
     .navBarLogo{
-        padding-top: 20%;
         margin: 5%;
+        padding-top: 20%;
     }
 
     .navbarTitle{
         display: flex;
-        color: var(--mainColorLight);
         font-size: x-large;
         font-weight: bolder;
+        color: var(--mainColorLight);
         text-shadow: 2px 1.5px var(--shadowColor);
     }
 
     .navbarElements{
-        color: var(--textColor);
-        text-shadow: 1px 1px black;
         display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-content: center;
         flex-wrap: nowrap;
+        flex-direction: row;
         align-items: center;
+        align-content: center;
+        color: var(--textColor);
+        justify-content: center;
+        text-shadow: 1px 1px black;
     }
 
     .navBarElement{
         margin: 5%;
-        color: var(--mainColor);
-        text-decoration: none;
         font-weight: bold;
+        text-decoration: none;
+        color: var(--mainColor);
         :hover{
             color: var(--secondaryColor);
         }
@@ -75,23 +86,23 @@ export const _NavBar = styled.section`
 
 export const _InfoSection = styled.section`
 
-    align-items: center;
+    margin: 5%;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     flex-direction: column;
-    margin: 5%;
     background-color: rgb(216, 115, 127, 0.5);
     box-shadow: 0px 3px 7.5px rgba(0, 0, 0, 0.5);
 
+    --textColor: #FCBB6D;
     --mainColor: #d8737f;
     --mainColorLight: #f18c8e;
-    --textColor: #FCBB6D;
     --shadowColorDark: #40394a;
 
     .Title{
         margin-bottom: -2%;
         color: var(--mainColorLight);
-        text-shadow: 2px 1px var(--shadowColorDark);
+        text-shadow: 1px 1px var(--shadowColorDark);
     }
 
     .Info{
@@ -110,27 +121,28 @@ export const _InfoSection = styled.section`
 
 export const _Contacts = styled.section`
 
-    --mainColor: #D8737F;
-    --mainColorLight: #f18c8e;
-    --highlight: #FCBB6D;
-    --shadowColor: #685D79;
-    --shadowColorDark: #40394a;
-
-    margin-top: auto;
     display: flex;
-    align-content: center;
+    margin-top: auto;
     align-items: center;
+    align-content: center;
     justify-content: space-around;
 
     background-size: cover;
     background-position: 1%;
     background-image: url(${banner});
+    
+    --mainColor: #D8737F;
+    --highlight: #FCBB6D;
+    --shadowColor: #685D79;
+    --mainColorLight: #f18c8e;
+    --shadowColorDark: #40394a;
+
 
     .contactElement{
         margin: 2%;
-        color: var(--mainColor);
-        text-decoration: none;
         font-weight: bold;
+        text-decoration: none;
+        color: var(--mainColor);
         :hover{
             color: var(--highlight);
         }
@@ -139,40 +151,45 @@ export const _Contacts = styled.section`
 
 export const _SliderStyles = styled.section`
         
-    height: 100%;
     width: 100%;
-    position: relative;
+    height: 100%;
     text-align: center;
+    position: relative;
 
     --mainColor: #D8737F;
-    --mainColorLight: #f18c8e;
     --highlight: #FCBB6D;
     --shadowColor: #685D79;
+    --mainColorLight: #f18c8e;
     --shadowColorDark: #40394a;
 
+    .title{
+        color: var(--highlight);
+        text-shadow: 1px 1px var(--shadowColorDark);
+    }
+
     .leftArrowStyles{
-        position: absolute;
         top: 50%;
-        transform: translate(0, -50%);
+        z-Index: 1;
         left: -50px;
         font-size: 45px;
-        color: var(--mainColorLight);
-        z-Index: 1;
         cursor: pointer;
+        position: absolute;
+        color: var(--mainColorLight);
+        transform: translate(0, -50%);
         :hover{
             color: var(--highlight);
         }
     }
 
     .rightArrowStyles{
-        position: absolute;
         top: 50%;
-        transform: translate(0, -50%);
+        z-Index: 1;
         right: -50px;
         font-size: 45px;
-        color: var(--mainColorLight);
-        z-Index: 1;
         cursor: pointer;
+        position: absolute;
+        color: var(--mainColorLight);
+        transform: translate(0, -50%);
         :hover{
             color: var(--highlight);
         }
@@ -211,9 +228,9 @@ export const _SliderStyles = styled.section`
 
 export const _TextBox = styled.section`
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 1.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 `

@@ -8,14 +8,14 @@ import { useRef } from "react";
 import { _SliderStyles } from "../Style";
 
 const slidesContainerStyles = {
-	display: "flex",
 	height: "100%",
+	display: "flex",
 	transition: "transform ease-out 0.7s",
 };
 
 const slidesContainerOverFlowStyles = {
-	overflow: "hidden",
 	height: "100%",
+	overflow: "hidden",
 };
 
 export default function GameplaySlider({ slides, parentWidth }) {
@@ -26,10 +26,10 @@ export default function GameplaySlider({ slides, parentWidth }) {
 	const getSlidesWithBackground = (slideIndex) => ({
 		height: "100%",
 		borderRadius: "10px",
-		backgroundPosition: "center",
 		backgroundSize: "cover",
-		backgroundImage: `url(${slides[slideIndex].image})`,
 		width: `${parentWidth}px`,
+		backgroundPosition: "center",
+		backgroundImage: `url(${slides[slideIndex].image})`,
 	});
 
 	const getSlidesContainerStylesWithWidth = () => ({
@@ -80,7 +80,7 @@ export default function GameplaySlider({ slides, parentWidth }) {
 			</div>
 
 			{/* Title */}
-			<h3>{slides[currentIndex + 1].title}</h3>
+			<h3 className="title">{slides[currentIndex + 1].title}</h3>
 
 			{/* Images */}
 			<div style={slidesContainerOverFlowStyles}>

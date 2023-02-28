@@ -20,7 +20,7 @@ function Navbar() {
 				<h1>Guar</h1>
 			</div>
 			<nav className="navbarElements">
-				<a href="/#Home" className="navBarElement">
+				<a href="/#Intro" className="navBarElement">
 					Home
 				</a>
 				<a href="/#Intro" className="navBarElement">
